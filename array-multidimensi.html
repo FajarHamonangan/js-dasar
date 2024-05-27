@@ -1,0 +1,62 @@
+<script>
+
+    // array 2 dimensi
+    var motor = [
+        // kol 0, kol 1, kol 2
+        ['Nmax', 'Aerox', 'Mio'],    // baris ke 0
+        ['PCX', 'Vario', 'Beat'],    // baris ke 1
+        ['GSX', 'Nex', 'Smash'],     // baris ke 2
+    ]
+    //console.log( motor )
+    //console.log( motor[0][2])
+
+    // latihan
+    var murid = [
+        
+        [1, "Vincet", 3.5],
+        [2, "Grace", 3.0],
+        [3, "Mamang", 2.1],
+        [4, "Aji", 3.5],
+        [5, "Gagan", 3.3],
+        [6, "Ami", 3.4],
+        [7, "Dony", 3.0],
+        [8, "Fajar", 3.3],
+
+    ]
+    // nulis langsung dari array
+    // document.write( murid[1][0] + '. ' + murid[2][1] + ', ' + 'IPK = ' + murid[1][2] + ' ' + )
+
+    var vincent_no     = murid[1][0] + '. '
+    var vincent_nama   = murid[2][1] + ', '
+    var vincet_ipk    = 'IPK = ' + murid[1][2] + ' '
+    var vincent_status = (murid[2][1] >=3.0) ? 'Lulus' : 'Gagal' // if else versi sebaris ( ternary operator)var Udin_no     = murid[1][0] + '. '
+    
+    var Udin_no     = murid[1][0] + '. '
+    var Udin_nama   = murid[2][1] + ', '
+    var Udin_ipk    = 'IPK = ' + murid[1][2] + ' '
+    var Udin_status = (murid[2][1] >=3.0) ? 'Lulus' : 'Gagal' // if else versi sebaris ( ternary operator)var Udin_no     = murid[1][0] + '. '
+
+    var mamang_no     = murid[0][0] + '. '
+    var mamang_nama   = murid[1][1] + ', '
+    var mamang_ipk    = 'IPK = ' + murid[1][2] + ' '
+    var mamang_status = (murid[2][1] >=3.0) ? 'Lulus' : 'Gagal' // if else versi sebaris ( ternary operator)var Udin_no     = murid[1][0] + '. '
+
+    // nulis dengan variabel baru
+    // document.write( Udin_no + Udin_nama + Udin_ipk + Udin_status + '<br>')
+    // document.write( Udin_no + Udin_nama + Udin_ipk + Udin_status + '<br>')
+    // document.write( Udin_no + Udin_nama + Udin_ipk + Udin_status + '<br>')
+
+
+
+    // looping, outputnya otomatis
+    for (let i=0; i < murid.length; i++) {
+        var no     = murid[i][0] + '. '
+        var nama   = murid[i][1] + ', '
+        var ipk    = 'IPK = ' + murid[i][2] + ' '
+        var status = (murid[i][2] >=3.0) ? '<span style="color:green">Lulus &#10004;</span>' : '<span style="color:red">Gagal &#x274C;</span>'
+        
+        document.write( no + nama + ipk + status + '<br>')
+
+    }
+
+</script>
