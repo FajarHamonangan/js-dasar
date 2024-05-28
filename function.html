@@ -1,0 +1,28 @@
+<script>
+
+    // simple function
+    // membuat function
+    function ucap_salam() {
+        console.log('Halo, nama saya Fajar')
+    
+    }
+
+    // menggunakan atau memanggil function
+    // ucap_salam()
+
+    // function dengan parameter
+    function halo(nama_orang, alamat = '', pekerjaan) {
+        if( alamat) {
+            console.log('Halo, nama saya ' + nama_orang + ', profesi saya ' +pekerjaan , ' saya tinggal di ' +alamat)
+        } else {
+            console.log('Halo, nama saya ' + nama_orang + ', profesi saya ' +pekerjaan)
+        }    
+    }
+
+    halo('Gagan')
+    // Jika ada parameter opsional, maka bisa diisi dengan null atau string kosong ('')
+    // ketika memanggil function tersebut
+    halo('Fajar', null, 'Programmer')
+    halo('Bambang', 'Bekasi', 'Android Developer')
+
+</script>
