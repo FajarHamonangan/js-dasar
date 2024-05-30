@@ -1,0 +1,39 @@
+<script>
+
+    var ipk = 'test'
+    var mahasiswa = { 
+        // key : value
+        nama: 'Fajar Hamonangan',
+        ipk: 3.3,
+        statusLulus: function () { //function anonymous = function tanpa nama -> function ()
+            if (this.ipk >=3) {
+                // console.log = 
+                // output untuk print atau mencetak ke view/html
+
+                // return =
+                // output untuk menghasilkan data
+                // yang akan digunakan oleh object/logic yang lain
+                return('Lulus')
+            } else {
+                return('Gagal')
+                
+            }
+
+            // menghasilkan data string
+            // var cek = (this.ipk >=3) ? 'Lulus' : 'gagal'
+            // return cek
+        },
+        cetakRapor: function () {
+            console.log(
+            `
+            Rapor ${this.nama}
+            ==============================
+            Indeks Prestasi Kumulatif: ${this.ipk}
+            Status Kelulusan: ${this.statusLulus()}`
+            )
+        }
+    }
+
+    // console.log(mahasiswa.nama) // bisa memanggil key seperti ini .key
+    // console.log(mahasiswa['nama']) // atau dengan ['key']
+    mahasiswa.cetakRapor()
