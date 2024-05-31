@@ -1,0 +1,53 @@
+<script>
+
+    // object
+    let kendaraan = {
+    brand: 'Honda Civic',
+    tipe: 'Sedan',
+    harga: 900,
+    startEngine: function () {
+        console.log('mobil nyala, siap jalan')
+    },
+    stopEngine: function () {
+        console.log('mobil mati')    
+    }
+
+}
+
+
+    // class
+
+    class Kendaraan {
+        constructor(brand, tipe, harga){
+            this.brand = brand  
+            this.tipe = tipe
+            this.harga = harga
+    }
+
+    startEngine() {
+        console.log(this.brand + ' nyala, siap jalan')
+    }
+    stopEngine() {
+        console.log(this.brand + ' mati')    
+    }
+
+}
+
+// object besar
+console.log(kendaraan.startEngine())
+
+// class = rancangan / blueprint untuk membuat sebuah object
+// daripada membuat object berulanglebih dari 1x
+// lebih baik buat class untuk menciptakan object tersebut
+
+console.log(new Kendaraan('Toyota Alphard','minibus',2000))
+// jadi sebuah object
+console.log(new Kendaraan('Toyota Avanza','minibus',500).startEngine())
+
+// console.log(Kendaraan.startEngine())
+// tidak bisa, karena belum mendefinisikan properti yang dibutuhkan
+// untuk menciptakan kendaraan
+
+let mazda = new Kendaraan('Mazda RX7','Supercar', 20000)
+mazda.startEngine()
+</script>
